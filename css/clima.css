@@ -1,0 +1,548 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+  font-size: 62.5%;
+  --intro-bg-color: rgb(235, 232, 229);
+  --text-color: rgb(139, 16, 16);
+  --bg-color: rgba(227, 253, 250, 0.932);
+  --bg-color-notrans: rgba(227, 253, 250);
+  --hover-color: rgba(250, 235, 215, 0.199);
+  --rain-bg: aquamarine;
+  --dry-bg: rgb(250, 250, 139);
+  --misty-bg: rgba(158, 156, 161, 0.993);
+  --cool-bg: rgb(116, 116, 248);
+  --table-border-color: rgba(0, 0, 0, 0.288);
+  --table-bg: rgba(255, 228, 196, 0.301);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(../images/background.png) center/cover;
+  font-family: "Raleway", sans-serif;
+  background-color: var(--bg-color);
+}
+
+main,
+.foot {
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+  width: 90%;
+  margin: auto;
+}
+
+/* setting the header */
+header {
+  margin-bottom: 2rem;
+  z-index: 9;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  height: 10rem;
+}
+
+.intro {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  margin: 3rem 0;
+  text-transform: uppercase;
+  z-index: -1;
+}
+.intro h1 {
+  font-size: clamp(1.3rem, 0.7rem + 1.5vw, 2.5rem);
+  color: var(--text-color);
+  text-align: center;
+}
+.intro::after,
+.intro::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -3rem;
+  width: 140%;
+  height: 9rem;
+}
+.intro::before {
+  background-color: var(--intro-bg-color);
+  z-index: -2;
+}
+.intro::after {
+  background: radial-gradient(lightblue, rgb(142, 195, 199));
+  z-index: -2;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+/* setting responsible nav for mobil */
+.nav-tog {
+  display: none;
+}
+.nav-tog-label {
+  position: absolute;
+  top: 3.8rem;
+  left: 0;
+  margin-left: 1rem;
+}
+.nav-tog-label span,
+.nav-tog-label span::before,
+.nav-tog-label span::after {
+  display: block;
+  background-color: black;
+  height: 3px;
+  width: 4vw;
+  border-radius: 2px;
+  position: relative;
+}
+.nav-tog-label span::after,
+.nav-tog-label span::before {
+  content: "";
+  position: absolute;
+}
+.nav-tog-label span::before {
+  bottom: 7px;
+}
+.nav-tog-label span::after {
+  top: 7px;
+}
+.nav-tog:checked ~ .topnav {
+  transform: scale(1, 1);
+}
+.topnav > * {
+  display: none;
+  transition: opacity 150ms ease-in-out;
+}
+.nav-tog:checked ~ .topnav > * {
+  display: block;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* setting navigation top bar */
+.topnav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100vw;
+  overflow: hidden;
+  font-weight: bold;
+  border-bottom: 2px solid lightblue;
+  margin-top: 1rem;
+  background-color: var(--bg-color);
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+.topnav,
+.dropdown,
+.dropbtn,
+footer {
+  font-size: clamp(1rem, 0.5rem + 1vw, 1.5rem);
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 2rem;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 2rem;
+  background-color: inherit;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: -4rem;
+  margin-left: 7rem;
+  background-color: var(--bg-color-notrans);
+  min-width: 16rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+  color: var(--text-color);
+}
+
+.dropdown-content a:hover {
+  background-color: var(--hover-color);
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* giving the color for every season */
+.rain {
+  background-color: var(--rain-bg);
+}
+
+.dry {
+  background-color: var(--dry-bg);
+}
+
+.misty {
+  background-color: var(--misty-bg);
+}
+
+.cool {
+  background-color: var(--cool-bg);
+}
+
+/* setting the detail table */
+.detail {
+  width: 80%;
+  border: 1px solid var(--table-border-color);
+  border-collapse: collapse;
+  margin: 2rem auto;
+}
+
+.detail th {
+  background-color: var(--table-bg);
+}
+
+.detail th,
+.detail td {
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid var(--table-border-color);
+}
+
+/* setting the weather table */
+h3 {
+  text-align: center;
+  padding-bottom: 3rem;
+  font-size: clamp(1.3rem, 1rem + 0.5vw, 2rem);
+}
+
+.clima-table {
+  display: none;
+}
+
+.region,
+.region2,
+.region3 {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  background-color: var(--table-bg);
+}
+
+.region>*,
+.region2>*,
+.region3>* {
+  width: 12rem;
+  height: 3rem;
+  border: 1px solid var(--table-border-color);
+  padding: 0.5rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col div:first-child {
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--table-bg);
+}
+
+.col>* {
+  width: 6rem;
+  height: 3rem;
+  border: 1px solid var(--table-border-color);
+}
+
+.container {
+  line-height: 20px;
+  text-align: justify;
+  width: 90%;
+  margin: 0 2rem 3rem;
+  row-gap: 1rem;
+  display: grid;
+  grid-template-areas:
+    "region jan feb march april"
+    "reg may june july aug"
+    "reg3 sep oct nov dec";
+}
+
+/* setting grid area for the table column */
+.region {
+  grid-area: region;
+}
+
+.region2 {
+  grid-area: reg;
+}
+
+.region3 {
+  grid-area: reg3;
+  display: block;
+}
+
+.jan {
+  grid-area: jan;
+}
+
+.feb {
+  grid-area: feb;
+}
+
+.march {
+  grid-area: march;
+}
+
+.april {
+  grid-area: april;
+}
+
+.may {
+  grid-area: may;
+}
+
+.june {
+  grid-area: june;
+}
+
+.july {
+  grid-area: july;
+}
+
+.aug {
+  grid-area: aug;
+}
+
+.sep {
+  grid-area: aug;
+}
+
+.sep {
+  grid-area: sep;
+}
+
+.oct {
+  grid-area: oct;
+}
+
+.nov {
+  grid-area: nov;
+}
+
+.dec {
+  grid-area: dec;
+}
+
+@media (min-width: 365px) {
+  .intro::after,
+.intro::before {
+  width: 200%;
+}
+  .container {
+    width: 90%;
+    margin: 0 2rem;
+    display: grid;
+    grid-template-areas:
+      "region jan feb march april may june"
+      "reg july aug sep oct nov dec";
+    row-gap: 1rem;
+  }
+
+  .region3 {
+    display: none;
+  }
+
+  .region>*,
+  .region2>* {
+    width: 25rem;
+    height: 3rem;
+  }
+
+  .col>* {
+    width: 10rem;
+    height: 3rem;
+  }
+
+  .detail {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 576px) {
+  .intro::after,
+  .intro::before {
+    width: 140%;
+  }
+}
+
+@media screen and (min-width: 865px) {
+  .intro::after,
+  .intro::before {
+    width: 120%;
+  }
+}
+
+/* setting the weather table with desktop dimension*/
+@media screen and (min-width: 992px) {
+    /* resetting the navigation bar */
+    .intro::after,
+    .intro::before {
+      height: 17rem;
+      width: 100%;
+    }
+  
+    .intro::after {
+      clip-path: polygon(0 0, 100% 0, 100% 45%, 30% 45%, 25% 100%, 0 100%);
+    }
+    header {
+      margin-bottom: 10rem;
+    }
+ 
+    .topnav {
+      all: unset;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      overflow: hidden;
+      font-weight: bold;
+      border-bottom: 2px solid lightblue;
+      margin-top: 1rem;
+      background-color: var(--bg-color);
+    }
+    .nav-tog-label {
+      display: none;
+    }
+    .topnav a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 1.4rem 2rem;
+      text-decoration: none;
+      font-size: 1.5rem;
+  
+    }
+    .dropdown {
+      display: flex;
+      overflow: hidden;
+    }
+    .dropdown-content {
+      all:unset;
+      display: none;
+      position: absolute;
+      top: 145%;
+      background-color: var(--bg-color-notrans);
+      min-width: 16rem;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 5;
+    }
+  
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 1.2rem 1.6rem;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+  
+    .topnav a:hover,
+    .dropdown:hover .dropbtn {
+      color: var(--text-color);
+    }
+  
+    .dropdown-content a:hover {
+      background-color: var(--hover-color);
+      color: black;
+    }
+  
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }  
+  .container {
+    display: none;
+  }
+
+  .clima-table {
+    display: block;
+    width: 95%;
+    border: 1px solid var(--table-border-color);
+    border-collapse: collapse;
+    margin-left: 2rem;
+  }
+
+  .clima-table th {
+    background-color: var(--table-bg);
+  }
+
+  .clima-table th,
+  .clima-table td {
+    border: 1px solid var(--table-border-color);
+    text-align: center;
+    height: 4rem;
+  }
+
+  .clima-table td {
+    width: 20rem;
+  }
+
+  .clima-table th:first-child {
+    text-align: left;
+    padding: 0.5rem;
+    width: 40rem;
+  }
+
+  .detail th,
+  .detail td {
+    height: 4rem;
+  }
+}
+
+/* setting the text */
+h2 {
+  margin: 2rem;
+}
+
+.clima {
+  margin: 15px 25px;
+  width: 95%;
+}
+
+.clima::first-letter {
+  font-weight: bold;
+}
+
+.foot {
+  text-align: right;
+  padding: 3rem;
+  }
+  

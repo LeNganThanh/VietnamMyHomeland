@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vietnam_Final_Project_Weather</title>
+    <link rel="stylesheet" href="css/clima.css" />
+    <link rel="shortcut icon" href="images/VN_Flag.jpg" type="image/x-icon" />
+  </head>
+
+  <body>
+    <header>
+      <div class="intro">
+        <h1>Vietnam - your destination - my homeland</h1>
+      </div>
+      <input type="checkbox" id="nav-tog" class="nav-tog">
+      <label for="nav-tog" class="nav-tog-label"><span></span></label>
+      <div class="topnav" id="myTopnav">
+        <a href="index.html" title="Homepage">HOME</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            CITIES
+          </button>
+          <div class="dropdown-content">
+            <a href="ha_noi.html">Ha Noi</a>
+            <a href="hcm_city.html">Ho Chi Minh</a>
+            <a href="da_nang.html">Da Nang</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            PLACES
+          </button>
+          <div class="dropdown-content">
+            <a href="ha_long.html">Ha Long</a>
+            <a href="sapa.html">Sapa</a>
+            <a href="phu_quoc.html">Phu Quoc</a>
+            <a href="bana_hill.html">Bana Hill</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">ABOUT</button>
+          <div class="dropdown-content">
+            <a href="currency.html">Currency</a>
+            <a href="clima.html">Weather</a>
+            <a href="language.html">Language</a>
+            <a href="religion.html">Religion</a>
+            <a href="population.html">Population</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            FOODS
+          </button>
+          <div class="dropdown-content">
+            <a href="pho.html">Pho</a>
+            <a href="bun_cha.html">Bun Cha</a>
+          </div>
+        </div>
+        <a href="survey.html" target="_blank" title="How much do you know about Vietnam?">SURVEY</a>
+        <a href="https://www.vietnamtourism.gov.vn/english/" title="Vietnam National Administration of Tourisme"
+          target="_blank">VNAT</a>
+        <a href="http://www.vietnambotschaft.org/startseite/" target="_blank"
+          title="Vietnamese Embassy in Germany">VNBD</a>
+      </div>
+    </header>
+        <main aria-label="The information about the weather in Vietnam">
+      <h3> When's the best time to visit Vietnam?</h3>
+
+      <table class="clima-table" aria-label="Weather table with top tourist areas">
+        <tr>
+          <th scope="col">Region</th>
+          <th scope="col">January</th>
+          <th scope="col">February</th>
+          <th scope="col">March</th>
+          <th scope="col">April</th>
+          <th scope="col">May</th>
+          <th scope="col">June</th>
+          <th scope="col">July</th>
+          <th scope="col">August</th>
+          <th scope="col">September</th>
+          <th scope="col">October</th>
+          <th scope="col">November</th>
+          <th scope="col">December</th>
+        </tr>
+        <tr>
+          <th scope="row">Ha Long bay</th>
+          <td class="cool"></td>
+          <td class="cool"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="rain"></td>
+          <td class="rain"></td>
+          <td class="misty"></td>
+          <td class="misty"></td>
+          <td class="cool"></td>
+        </tr>
+        <tr>
+          <th scope="row">Ha Noi</th>
+          <td class="cool"></td>
+          <td class="misty"></td>
+          <td class="misty"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="rain"></td>
+          <td class="rain"></td>
+          <td class="cool"></td>
+          <td class="cool"></td>
+        </tr>
+        <tr>
+          <th scope="row">Sapa</th>
+          <td class="misty"></td>
+          <td class="misty"></td>
+          <td class="misty"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="rain"></td>
+          <td class="rain"></td>
+          <td class="rain"></td>
+          <td class="cool"></td>
+          <td class="cool"></td>
+          <td class="misty"></td>
+        </tr>
+        <tr>
+          <th scope="row">Da Nang</th>
+          <td class="rain"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="rain"></td>
+          <td class="rain"></td>
+          <td class="rain"></td>
+          <td class="rain"></td>
+        </tr>
+        <tr>
+          <th scope="row">Ho Chi Minh City</th>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="rain"></td>
+          <td class="rain"></td>
+          <td class="rain"></td>
+          <td class="rain"></td>
+          <td class="rain"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+        </tr>
+        <tr>
+          <th scope="row">Phu Quoc</th>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="rain"></td>
+          <td class="rain"></td>
+          <td class="rain"></td>
+          <td class="rain"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+          <td class="dry"></td>
+        </tr>
+      </table>
+      <div
+      class="container"
+      aria-label="The container weather table using for mobile and tablet"
+    >
+      <div class="region" aria-label="The most visiting areas">
+        <div>Region</div>
+        <div>Ha Long bay</div>
+        <div>Ha Noi</div>
+        <div>Sapa</div>
+        <div>Da Nang</div>
+        <div>Ho Chi Minh City</div>
+        <div>Phu Quoc</div>
+      </div>
+      <div class="region2" aria-label="The most visiting areas">
+        <div>Region</div>
+        <div>Ha Long bay</div>
+        <div>Ha Noi</div>
+        <div>Sapa</div>
+        <div>Da Nang</div>
+        <div>Ho Chi Minh City</div>
+        <div>Phu Quoc</div>
+      </div>
+      <div class="region3" aria-label="The most visiting areas">
+        <div>Region</div>
+        <div>Ha Long bay</div>
+        <div>Ha Noi</div>
+        <div>Sapa</div>
+        <div>Da Nang</div>
+        <div>Ho Chi Minh City</div>
+        <div>Phu Quoc</div>
+      </div>
+
+      <div class="col jan" aria-label="The weather in January">
+        <div>January</div>
+        <div class="cool"></div>
+        <div class="cool"></div>
+        <div class="misty"></div>
+        <div class="rain"></div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+      </div>
+      <div class="col feb" aria-label="The weather in February">
+        <div>February</div>
+        <div class="cool"></div>
+        <div class="misty"></div>
+        <div class="misty"></div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+      </div>
+      <div class="col march" aria-label="The weather in March">
+        <div>March</div>
+        <div class="dry"></div>
+        <div class="misty"></div>
+        <div class="misty"></div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+      </div>
+      <div class="col april" aria-label="The weather in April">
+        <div>April</div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+      </div>
+      <div class="col may" aria-label="The weather in May">
+        <div>May</div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+        <div class="rain"></div>
+        <div class="dry"></div>
+      </div>
+      <div class="col june" aria-label="The weather in June">
+        <div>June</div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+      </div>
+      <div class="col july" aria-label="The weather in July">
+        <div>July</div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+        <div class="rain"></div>
+        <div class="dry"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+      </div>
+      <div class="col aug" aria-label="The weather in August">
+        <div>August</div>
+        <div class="rain"></div>
+        <div class="dry"></div>
+        <div class="rain"></div>
+        <div class="dry"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+      </div>
+      <div class="col sep" aria-label="The weather in September">
+        <div>September</div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+      </div>
+      <div class="col oct" aria-label="The weather in October">
+        <div>October</div>
+        <div class="misty"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+      </div>
+      <div class="col nov" aria-label="The weather in November">
+        <div>November</div>
+        <div class="misty"></div>
+        <div class="cool"></div>
+        <div class="cool"></div>
+        <div class="rain"></div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+      </div>
+      <div class="col dec" aria-label="The weather in December">
+        <div>December</div>
+        <div class="cool"></div>
+        <div class="cool"></div>
+        <div class="misty"></div>
+        <div class="rain"></div>
+        <div class="dry"></div>
+        <div class="dry"></div>
+      </div>
+    </div>
+
+      <table class="detail" aria-label="The table for detail weather in each season">
+        <tr>
+          <th scope="col">Dry season</th>
+          <th scope="col">Rainy season</th>
+          <th scope="col">Misty weather</th>
+          <th scope="col">Cold weather</th>
+        </tr>
+        <tr>
+          <td class="dry">25oC - 38oC</td>
+          <td class="rain">20oC - 33oC</td>
+          <td class="misty">20oC - 27oC</td>
+          <td class="cool">10oC - 23oC</td>
+        </tr>
+      </table>
+      <h2>Climate by regions</h2>
+      <p class="clima">
+        The North (Hanoi, Halong Bay) is monsoonal with hot and rainy season
+        from April to September and cool dry season from October to March.
+        October and November are the best months to visit since you avoid the
+        domestic tourist flow and also experience a more comfortable temperature
+        and humidity compared with other months.
+      </p>
+      <p class="clima">
+        The Central part of Vietnam (Hue, Da Nang and Hoi An) receives dry and
+        hot Southwest wind which makes it strenuous for any brisk walk during
+        the day. Closer to the beach, the level of severity reduced and the dry
+        wind is replaced by cool ocean breeze. Because of the limited land area,
+        central Vietnam is also most susceptible to natural disasters such as
+        hurricane or flooding. The paradox is, it is also where most beautiful
+        beaches lie.
+      </p>
+      <p class="clima">
+        The South (Ho Chi Minh City, Nha Trang, Mui Ne) is typically hot all
+        year round with two main seasons: rainy and dry. It is also the most
+        predictable region in terms of weather. Summer months from May to August
+        might not be the best time to hit the road since most tourists
+        destinations are packed with tourists and downpours happen quite
+        frequently.
+      </p>
+      <p class="clima">
+        The mountain area in Northwest and South central Vietnam see little
+        fluctuation in weather condition. It is fairly cool all year round and a
+        great place to escape the heat from cities. The rainy season is also
+        from May to September. At the extreme you can see snow or flurry in
+        December or January in Sapa.
+      </p>
+      <p class="clima">
+        Vietnam's unique geography creates a range of weather patterns, with
+        both tropical and temperate zones. While March to May offers the best
+        weather countrywide, there is no bad time to visit Vietnam, as there is
+        always some part of the country with holiday skies. Below is a guide to
+        climate of Vietnam's major regions and destinations, so you know what to
+        expect during your trip.
+      </p>
+
+    </main>
+    <footer class="foot">
+      <p >
+        <em
+          >DCI Orientation Training Course Final Project - Vietnam in my heart.
+          Introduce Vietnam to the world - Created by Thi Ngan Thanh Le - 2022</em
+        >
+      </p>
+    </footer>
+  </body>
+</html>
